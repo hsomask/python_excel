@@ -1,0 +1,7 @@
+删除spec文件、dist文件夹、build文件夹
+
+# 1. 删除所有旧生成文件（关键步骤！）
+rmdir /s /q build dist __pycache__ excelTool.spec
+
+# 2. 使用 --clean 参数重新打包（无需 --nocache）
+pyinstaller --onefile --icon=MUTRK.ico --clean excelTool.py
